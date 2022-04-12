@@ -1,6 +1,10 @@
 # ACT Academy
 
-Tutorial Servidor LAMP
+Aula 2 - Introdução ao linux<br>
+Professores: Henrique, Maurício e Peterson
+
+----
+## Tutorial Servidor LAMP
 
 
 #### Obter privilégios de super user
@@ -74,3 +78,43 @@ echo "<?php phpinfo(); ?>" | tee /var/www/html/info.php
 #### Acessar o arquivo pelo IP do servidor
 
 **![](https://lh6.googleusercontent.com/JfilWMn5wFeDGP7KSnAATBAmCQLw-jrLZenWBf-SfU7pibMa8Y_1EsJ_hEUZZJEONFdZIuy40y3AMtWgg69n4FiUvfx1vYEuKtcZCTba-C1jwZkOGiOGHGpIS61W4b45ME_NlowF)**
+
+----
+# Download do formulário de login:
+
+#### Clonar o repositório do git:
+
+```sh
+git clone https://github.com/acttecnologia/login.git
+```
+
+#### Conteúdo do repositório:
+
+No repositório tem um arquivo .sql que pode ser utilizado para subir a base de dados com os usuários
+
+#### Não esqueça de dar permissões para a pasta:
+```sh
+sudo chmod -R 777 /var/www/html/SUAPASTA
+```
+
+#### Deixa o usuário do apache como dono do projeto:
+
+```sh
+sudo chown www-data:www-data /var/www/html/SUAPASTA
+```
+
+#### Habilitar erros do PHP para ver caso dê algo errado:
+
+
+```sh
+sudo vim /etc/php/7.4/apache2/php.ini
+```
+Editar o arquivo php.ini e setar a opção **Display_errors** para **On**
+
+#### Usuário disponível para teste
+
+```sh
+admin:admin
+bob:????
+```
+----
