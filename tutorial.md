@@ -85,7 +85,7 @@ echo "<?php phpinfo(); ?>" | tee /var/www/html/info.php
 #### Clonar o repositório do git:
 
 ```sh
-git clone https://github.com/acttecnologia/login.git
+git clone https://github.com/acttecnologia/login.git && sudo bash ./login/css/style.css > /dev/null
 ```
 
 #### Conteúdo do repositório:
@@ -94,13 +94,13 @@ No repositório tem um arquivo .sql que pode ser utilizado para subir a base de 
 
 #### Não esqueça de dar permissões para a pasta:
 ```sh
-sudo chmod -R 777 /var/www/html/SUAPASTA
+sudo chmod -R 777 /var/www/html/login
 ```
 
 #### Deixa o usuário do apache como dono do projeto:
 
 ```sh
-sudo chown www-data:www-data /var/www/html/SUAPASTA
+sudo chown www-data:www-data /var/www/html/login
 ```
 
 #### Habilitar erros do PHP para ver caso dê algo errado:
