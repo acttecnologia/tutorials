@@ -69,7 +69,7 @@ sudo service apache2 restart
 ```
 #### Criar arquivo do php info no servidor
 
-```
+```sh
 echo "<?php phpinfo(); ?>" | tee /var/www/html/info.php
 ```
 #### Acessar o arquivo pelo IP do servidor
