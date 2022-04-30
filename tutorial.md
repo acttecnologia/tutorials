@@ -102,6 +102,13 @@ sudo chown www-data:www-data /var/www/html/login
 ```
 #### Ajustar as configurações de acesso do root no mysql
 
+Primeiro acesse o banco de dados:
+
+```sh
+mysql -u root -p
+```
+
+Após acessar entre com o seguinte comando substituindo 'password' pela sua senha.
 ```sh
 GRANT ALL PRIVILEGES ON *.* TO root@localhost IDENTIFIED BY "PASSWORD";
 ```
