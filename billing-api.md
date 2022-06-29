@@ -32,15 +32,15 @@ https://gerenciador.acttecnologia.com.br/api/billing.php?disposition=<DISPOSITIO
     ```all```: Ambas as anteriores.
 
 ### Parâmetros opcionais:
-Você também pode definir um período específico para que a API retorne os dados. Para ussi usam-se os seguintes parâmetros:
+Você também pode definir um período específico para que a API retorne os dados. Para isso usam-se os seguintes parâmetros:
 
 - ```initialDate```: Data inicial do período desejado;
 
-- ```finalDate```: Dara final do período.
+- ```finalDate```: Data final do período.
 
-- ```Padrão (vazio)```: Caso nenhum período seja definido, serão trazdias apenas as ligações do dia atual da requisição;
+- ```Padrão (vazio)```: Caso nenhum período seja definido, serão trazidas apenas as ligações do dia atual da requisição;
 
-- O formato da data é no padrão americano. Ex.: 2022-06-28
+- O formato da data é no padrão americano. Ex.: 2022-06-28.
 
 #### Observações:
 - O período máximo para trazer ligações simultaneamente será de 3 meses. Caso seja definido um período maior na requisição, a API muda automaticamente para 3 meses.
