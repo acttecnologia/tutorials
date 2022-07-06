@@ -40,7 +40,7 @@ Você também pode definir um período específico para que a API retorne os dad
 
 - ```Padrão (vazio)```: Caso nenhum período seja definido, serão trazidas apenas as ligações do dia atual da requisição;
 
-- O formato da data é no padrão americano. Ex.: 2022-06-28.
+- O formato da data deverá ser o seguinte: yyyy-mm-dd.
 
 #### Observações:
 - O período máximo para trazer ligações simultaneamente será de 3 meses. Caso seja definido um período maior na requisição, a API muda automaticamente para 3 meses.
