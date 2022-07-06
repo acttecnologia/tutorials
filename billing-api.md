@@ -1,13 +1,14 @@
 # API Bilhetagem
 
-Esta é uma API para clientes de PABX IP da Act Tecnologia. Ela retorna histórico e dados de suas ligações.
+Esta é uma API para clientes de PABX IP da Act Tecnologia. Ela retorna histórico e dados das ligações efetuadas na nossa central.
 
 
-## Como utilizar
+## Obter ligações [GET]
 
-Para obter o histórico de ligações, basta enviar uma URL como a seguinte:
+Para obter o histórico de ligações, basta enviar uma requisição do tipo GET para a seguinte URL:
 
-```
+
+```url
 https://gerenciador.acttecnologia.com.br/api/billing.php?disposition=<DISPOSITION>&type=<TYPE>
 ```
 
@@ -48,6 +49,6 @@ Você também pode definir um período específico para que a API retorne os dad
 
 Veja um exemplo de URL com data definida:
 
-```
+```url
 https://gerenciador.acttecnologia.com.br/api/billing.php?initialDate=2022-06-01&finalDate=2022-06-28&disposition=answered&type=outgoing
 ```
