@@ -9,19 +9,24 @@ Para obter o histórico de ligações, basta enviar uma requisição do tipo GET
 
 
 ```url
-https://gerenciador.acttecnologia.com.br/api/billing.php?disposition=<DISPOSITION>&type=<TYPE>
+https://gerenciador.acttecnologia.com.br/api/billing.php?api_token=<API_TOKEN>&start_date=<INITIAL_DATE>&end_date=<FINAL_DATE>&disposition=<DISPOSITION>&type=<TYPE>
 ```
 
 ### Onde:
+- ```<API_TOKEN>``` deve ser o token que você recebeu para autenticação nessa API.
+
+
+- ```<INITIAL_DATE>``` corresponde a data inicial do período desejado e deve ter o formato ```yyyy-mm-dd```
+
+
+- ```<FINAL_DATE>``` corresponde a data final do período desejado e deve também, ter o formato ```yyyy-mm-dd```
+
 
 - ```<DISPOSITION>``` pode ser:
 
     ```answered```: Ligações atendidas;
 
-    ```noAnswer```: Ligações não atendidas;
-
-    ```all```: Ambas as anteriores.
-
+    ```no_answer```: Ligações não atendidas;
 
 
 - ```<TYPE>``` pode ser:
@@ -32,23 +37,12 @@ https://gerenciador.acttecnologia.com.br/api/billing.php?disposition=<DISPOSITIO
 
     ```all```: Ambas as anteriores.
 
-### Parâmetros opcionais:
-Você também pode definir um período específico para que a API retorne os dados. Para isso usam-se os seguintes parâmetros:
-
-- ```initialDate```: Data inicial do período desejado;
-
-- ```finalDate```: Data final do período.
-
-- ```Padrão (vazio)```: Caso nenhum período seja definido, serão trazidas apenas as ligações do dia atual da requisição;
-
-- O formato da data deverá ser o seguinte: yyyy-mm-dd.
-
 #### Observações:
-- O período máximo para trazer ligações simultaneamente será de 3 meses. Caso seja definido um período maior na requisição, a API muda automaticamente para 3 meses.
-- Caso apenas data inicial ou apenas data final sejam definidas, ou o formato da data seja inválido, o retorno será o padrão.
+- O período máximo para trazer ligações simultaneamente será de 3 meses. Caso seja definido um período maior na requisição, será retornada uma array vazia.
+- Caso apenas data inicial ou apenas data final sejam definidas, ou o formato da data seja inválido, também será retornada uma array vazia.
 
-Veja um exemplo de URL com data definida:
+Veja um exemplo de URL:
 
 ```url
-https://gerenciador.acttecnologia.com.br/api/billing.php?initialDate=2022-06-01&finalDate=2022-06-28&disposition=answered&type=outgoing
+https://gerenciador.acttecnologia.com.br/api/billing.php?api_token=5468asd48asd4a6s8da98d4a68dads58&start_date=2022-06-01&end_date=2022-06-28&disposition=answered&type=outgoing
 ```
