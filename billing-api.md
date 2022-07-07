@@ -40,6 +40,7 @@ https://gerenciador.acttecnologia.com.br/api/billing.php?api_token=<API_TOKEN>&s
 #### Observações:
 - O período máximo para trazer ligações simultaneamente será de 3 meses. Caso seja definido um período maior na requisição, será retornado erro 400 Bad Request.
 - Caso apenas data inicial ou apenas data final sejam definidas, ou o formato da data seja inválido, também será retornado erro 400 Bad Request.
+- Caso algum dos outros parâmetros seja inválido, será retornado erro 400 Bad Request.
 
 #### Veja um exemplo de URL:
 
