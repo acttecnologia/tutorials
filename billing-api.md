@@ -38,10 +38,10 @@ https://gerenciador.acttecnologia.com.br/api/billing.php?api_token=<API_TOKEN>&s
     ```all```: Ambas as anteriores.
 
 #### Observações:
-- O período máximo para trazer ligações simultaneamente será de 3 meses. Caso seja definido um período maior na requisição, será retornada uma array vazia.
-- Caso apenas data inicial ou apenas data final sejam definidas, ou o formato da data seja inválido, também será retornada uma array vazia.
+- O período máximo para trazer ligações simultaneamente será de 3 meses. Caso seja definido um período maior na requisição, será retornado erro 400 Bad Request.
+- Caso apenas data inicial ou apenas data final sejam definidas, ou o formato da data seja inválido, também será retornado erro 400 Bad Request.
 
-Veja um exemplo de URL:
+#### Veja um exemplo de URL:
 
 ```url
 https://gerenciador.acttecnologia.com.br/api/billing.php?api_token=5468asd48asd4a6s8da98d4a68dads58&start_date=2022-06-01&end_date=2022-06-28&disposition=answered&type=outgoing
