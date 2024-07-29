@@ -47,3 +47,22 @@ https://gerenciador.acttecnologia.com.br/api/billing.php?api_token=<API_TOKEN>&s
 ```url
 https://gerenciador.acttecnologia.com.br/api/billing.php?api_token=5468asd48asd4a6s8da98d4a68dads58&start_date=2022-06-01&end_date=2022-06-28&disposition=answered&type=outgoing
 ```
+
+## Fazer download das gravações [GET]
+
+Para fazer o download de alguma ligação em especifica você deve ter o **nome do arquivo de recordação**. É possível obte-lo através da requisição "*Obter ligações [GET]*", onde no retorno haverá uma key chamada **"recording-file"**, que deverá ser utilizada para a requisição abaixo.
+
+```url
+https://gerenciador.acttecnologia.com.br/api/recording_download.php?api_token=<API_TOKEN>&file=<RECORDING_FILE>
+```
+### Onde:
+- ```<API_TOKEN>``` deve ser o token que você recebeu para autenticação nessa API.
+
+
+- ```<RECORDING_FILE>``` Corresponde ao nome do arquivo de recordação da ligação que você deseja baixar.
+
+#### Veja um exemplo de URL:
+
+```url
+https://gerenciador.acttecnologia.com.br/api/recording_download.php?api_token=5468asd48asd4a6s8da98d4a68dads58&file=force-124324234.32132141.434321.3243
+```
